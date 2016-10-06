@@ -1,9 +1,11 @@
 DROP VIEW QUAKES.vue_Quakes_Magnitudes_Grouped_Year_CC_Admin1;
-DROP VIEW Quakes.vue_Quakes_Magnitudes;
+DROP VIEW QUAKES.vue_Quakes_Magnitudes;
 
 DROP VIEW QUAKES.vue_Quakes_Oklahoma_vs_California;
 
 DROP TABLE QUAKES.Quakes;
+
+SET SCHEMA QUAKES;
 
 CREATE TABLE QUAKES.Quakes (
 	DateTime TIMESTAMP,
