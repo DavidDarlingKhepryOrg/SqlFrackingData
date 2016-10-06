@@ -1,11 +1,13 @@
+CREATE SCHEMA QUAKES;
+
+SET SCHEMA QUAKES;
+
 DROP VIEW QUAKES.vue_Quakes_Magnitudes_Grouped_Year_CC_Admin1;
 DROP VIEW QUAKES.vue_Quakes_Magnitudes;
 
 DROP VIEW QUAKES.vue_Quakes_Oklahoma_vs_California;
 
 DROP TABLE QUAKES.Quakes;
-
-SET SCHEMA QUAKES;
 
 CREATE TABLE QUAKES.Quakes (
 	DateTime TIMESTAMP,
@@ -171,3 +173,5 @@ ORDER BY
     cc,
     Event_Year DESC,
     admin1;
+    
+-- CALL SYSCS_UTIL.SYSCS_IMPORT_TABLE ('QUAKES','QUAKES','E:\home\data\quake-info\NCEDC_earthquakes_reverse_geocoded.csv',null,null,null,0);
